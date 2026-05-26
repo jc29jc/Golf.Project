@@ -17,10 +17,10 @@ nav a {
     margin: 0 15px; 
     font-weight: bold;
 }
+
 nav a:hover {
     color: #a3e2a3; 
 }
-
 
 h1 {
     color: #1b4d22;
@@ -31,6 +31,6 @@ h1 {
 p {
     text-align: center;
     color: #000000; 
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: bold; 
 }
