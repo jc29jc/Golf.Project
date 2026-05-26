@@ -1,0 +1,40 @@
+/* 1. Style the background and text of the entire website */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f4; /* A very soft, light gray-green background */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Turn your nav list into a solid green bar at the top */
+nav {
+    background-color: #1b4d22; /* Golf Course Green */
+    padding: 15px;
+    text-align: center; /* Centers your menu links */
+}
+
+/* 3. Style the links inside the nav bar */
+nav a {
+    color: white; /* White text for the links */
+    text-decoration: none; /* Removes the ugly default underlines */
+    margin: 0 15px; /* Adds space between your buttons */
+    font-weight: bold;
+}
+
+/* 4. Make the links change color slightly when you hover over them */
+nav a:hover {
+    color: #a3e2a3; /* Light green hover effect */
+}
+
+/* 5. Center and format your page headers and text */
+h1 {
+    color: #1b4d22;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p {
+    text-align: center;
+    color: #555555;
+    font-size: 18px;
+}
