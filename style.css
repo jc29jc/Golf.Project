@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #20a331; 
+    background-color: #1b4d22; 
     padding: 15px;
     text-align: center; 
 }
@@ -17,10 +17,10 @@ nav a {
     margin: 0 15px; 
     font-weight: bold;
 }
-
 nav a:hover {
     color: #a3e2a3; 
 }
+
 
 h1 {
     color: #1b4d22;
@@ -30,6 +30,7 @@ h1 {
 
 p {
     text-align: center;
-    color: #000000;
-    font-size: 18px;
+    color: #000000; 
+    font-size: 18px; 
+    font-weight: bold; 
 }
