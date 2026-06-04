@@ -17,25 +17,28 @@
     
     <h1>Golf Handicap Calculator</h1>
     <p>Enter your scores below to create your own handicap</p>
-    <div class="calc-box">
-        <label>Gross Score:</label>
-        <input type="number" id="grossScore" placeholder="85"
+   <div class="calc-box">
+        <h3>Enter Your 5 Gross Scores:</h3>
+        <input type="number" id="score1" placeholder="Round 1 Score (e.g., 85)">
+        <input type="number" id="score2" placeholder="Round 2 Score (e.g., 88)">
+        <input type="number" id="score3" placeholder="Round 3 Score (e.g., 82)">
+        <input type="number" id="score4" placeholder="Round 4 Score (e.g., 89)">
+        <input type="number" id="score5" placeholder="Round 5 Score (e.g., 84)">
 
+        <h3>Course Information:</h3>
         <label>Course Rating:</label>
-        <input type="number" id="courseRating" step="0.1" placeholder="72.0">
+        <input type="number" id="courseRating" step="0.1" placeholder="e.g., 72.0">
 
         <label>Slope Rating:</label>
-        <input type="number" id="slopeRating" placeholder="125">
+        <input type="number" id="slopeRating" placeholder="e.g., 125">
 
-        <button onclick="calculateHandicap()">Calculate</button>
+        <button onclick="calculateAverageHandicap()">Calculate Average Handicap</button>
     </div>
 
     <div id="handicapResult" class="calc-result">
-        <h2>Your Score Differential:</h2>
+        <h2>Your Estimated Handicap Index:</h2>
         <p id="differentialValue">0.0</p>
+        <p style="font-size: 14px; font-style: italic; color: #555;">(Calculated by averaging your 5 individual round differentials)</p>
     </div>
 
     <script src="handicap.js"></script>
-
-</body>
-</html>

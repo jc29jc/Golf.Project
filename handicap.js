@@ -1,15 +1,29 @@
-function calculateHandicap() {
-    const score = parseFloat(document.getElementById("grossScore").value);
+function calculateAverageHandicap() {
     const rating = parseFloat(document.getElementById("courseRating").value);
     const slope = parseFloat(document.getElementById("slopeRating").value);
 
-    if (!score || !rating || !slope) {
-        alert("Please fill out all fields!");
+    if (!rating || !slope) {
+        alert("Please enter a Course Rating and Slope Rating!");
         return;
     }
 
-    let result = (score - rating) * 113 / slope;
-    
-    document.getElementById("differentialValue").innerText = result.toFixed(1);
+    let totalDifferential = 0;
+    let scoresCount = 5;
+
+    for (let i = 1; i <= scoresCount; i++) {
+        const scoreValue = parseFloat(document.getElementById("score" + i).value);
+
+        if (!scoreValue) {
+            alert("Please fill out all 5 score fields!");
+            return;
+        }
+
+        let roundDiff = (scoreValue - rating) * 113 / slope;
+        totalDifferential += roundDiff;
+    }
+
+    let averageHandicap = totalDifferential / scoresCount;
+
+    document.getElementById("differentialValue").innerText = averageHandicap.toFixed(1);
     document.getElementById("handicapResult").style.display = "block";
 }
