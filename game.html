@@ -16,10 +16,11 @@
     </nav>
 
 
-    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+ <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
         <h1>Golf Trivia Quiz</h1>
+        <p style="color: gray; font-size: 14px;">(Note: Click on the words to answer)</p>
         <h3 id="question">Question shows here</h3>
-        <div id="buttons"></div>
+        <div id="choices"></div>
         <h2 id="score">Score: 0</h2>
     </div>
 
@@ -42,7 +43,7 @@
 
         function showQuestion() {
             if (index >= questions.length) {
-                document.body.innerHTML = `<div style="text-align:center; margin-top:100px;"><h2>Game Over!</h2><h3>Final Score: ${score} / 10</h3><button onclick="location.reload()">Play Again</button></div>`;
+                document.body.innerHTML = `<div style="text-align:center; margin-top:100px; font-family:sans-serif;"><h2>Game Over!</h2><h3>Final Score: ${score} / 10</h3><button onclick="location.reload()">Play Again</button></div>`;
                 return;
             }
 
@@ -50,11 +51,12 @@
             document.getElementById("question").innerText = current.q;
             document.getElementById("score").innerText = "Score: " + score;
 
-            let btnHTML = "";
+            let html = "";
             current.a.forEach((choice, i) => {
-                btnHTML += `<button style="display:block; width:200px; margin:10px auto; padding:10px;" onclick="check(${i})">${choice}</button>`;
+                // Renders as plain clickable text with a pointer cursor instead of a button block
+                html += `<p style="cursor:pointer; font-size:18px; margin:15px 0;" onclick="check(${i})">${choice}</p>`;
             });
-            document.getElementById("buttons").innerHTML = btnHTML;
+            document.getElementById("choices").innerHTML = html;
         }
 
         function check(choice) {
