@@ -22,15 +22,54 @@ nav a:hover {
     color: #a3e2a3; 
 }
 
-h1 {
-    color: #1b4d22;
+h1, h2, h3, p, .featured-container {
     text-align: center;
-    margin-top: 40px;
+    color: #000000;
+}
+
+h1, h2, h3 {
+    color: #1b4d22;
 }
 
 p {
-    text-align: center;
-    color: #000000; 
     font-size: 18px;
     font-weight: bold; 
+}
+
+.search-box, .leaderboard-container {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+input {
+    padding: 8px;
+    width: 60%;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #1b4d22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.leaderboard-container button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+ol {
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+    line-height: 2;
 }
