@@ -14,13 +14,62 @@
         <a href="leaderboard.html">Leaderboard</a> | 
         <a href="game.html">Golf Game</a>
     </nav>
-    
-<div style="text-align: center; margin: 50px auto; max-width: 500px;">
-        <h2>Mini Golf</h2>
-        <p id="golfStatus">You are on the tee. Hole is 350 yards away.</p>
-        <button onclick="playGolf()">Swing Club</button>
+
+
+    <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
+        <h1>Golf Trivia Quiz</h1>
+        <h3 id="question">Question shows here</h3>
+        <div id="buttons"></div>
+        <h2 id="score">Score: 0</h2>
     </div>
 
-    <script src="game.js"></script>
+    <script>
+        const questions = [
+            { q: "Which tournament awards a 'Green Jacket'?", a: ["The Masters", "U.S. Open", "The Open"], correct: 0 },
+            { q: "What is 1 stroke under par on a hole?", a: ["Bogey", "Birdie", "Eagle"], correct: 1 },
+            { q: "How many holes are in a standard round?", a: ["9", "14", "18"], correct: 2 },
+            { q: "Who has the most Major wins ever (18)?", a: ["Tiger Woods", "Jack Nicklaus", "Arnold Palmer"], correct: 1 },
+            { q: "Max number of clubs allowed in a bag?", a: ["10", "14", "16"], correct: 1 },
+            { q: "What is used to prop the ball up on a tee shot?", a: ["Marker", "Divot", "Tee"], correct: 2 },
+            { q: "What do you yell to warn players of a stray ball?", a: ["Fore!", "Duck!", "Heads up!"], correct: 0 },
+            { q: "Which country is the birthplace of modern golf?", a: ["USA", "Scotland", "England"], correct: 1 },
+            { q: "Which club is used to roll the ball on the green?", a: ["Driver", "Iron", "Putter"], correct: 2 },
+            { q: "What is it called when you hole the ball in 1 shot?", a: ["Birdie", "Hole-in-one", "Albatross"], correct: 1 }
+        ];
+
+        let index = 0;
+        let score = 0;
+
+        function showQuestion() {
+            if (index >= questions.length) {
+                document.body.innerHTML = `<div style="text-align:center; margin-top:100px;"><h2>Game Over!</h2><h3>Final Score: ${score} / 10</h3><button onclick="location.reload()">Play Again</button></div>`;
+                return;
+            }
+
+            const current = questions[index];
+            document.getElementById("question").innerText = current.q;
+            document.getElementById("score").innerText = "Score: " + score;
+
+            let btnHTML = "";
+            current.a.forEach((choice, i) => {
+                btnHTML += `<button style="display:block; width:200px; margin:10px auto; padding:10px;" onclick="check(${i})">${choice}</button>`;
+            });
+            document.getElementById("buttons").innerHTML = btnHTML;
+        }
+
+        function check(choice) {
+            if (choice === questions[index].correct) {
+                score++;
+                alert("Correct!");
+            } else {
+                alert("Wrong!");
+            }
+            index++;
+            showQuestion();
+        }
+
+        showQuestion();
+    </script>
+
 </body>
 </html>
