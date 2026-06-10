@@ -35,7 +35,7 @@ const players = {
         scoring: "68.84 (Career Prime)",
         earnings: "$121,000,000+",
         fact: "Held all 4 major trophies at the exact same time in 2001, known as the 'Tiger Slam'.",
-        media: '<iframe width="100%" height="315" src="https://www.youtube.com/embed/Y0n6UInwH-0" frameborder="0" allowfullscreen></iframe>'
+        media: '<iframe width="100%" height="315" src="https://www.youtube.com/watch?v=pq-L5SqXn24" frameborder="0" allowfullscreen></iframe>'
     },
     "phil mickelson": {
         name: "Phil Mickelson",
