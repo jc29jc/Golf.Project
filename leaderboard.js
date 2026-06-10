@@ -11,7 +11,6 @@ function searchPlayer() {
             <p>Scoring Average: ${p.scoring}</p>
             <p>Career Earnings: ${p.earnings}</p>
             <p>${p.fact}</p>
-            <div style="max-width: 300px; margin: 15px auto;">${p.media}</div>
         `;
     } else {
         alert("Player not found!");
@@ -25,7 +24,7 @@ const players = {
         majors: "3",
         scoring: "70.12",
         earnings: "$62,800,000+",
-        fact: "Won the Master and US open (both majors) in 2015 at just 21 years old.",
+        fact: "Won the Master and US open (both majors) in 2015 at just 21 years old."
     },
     "tiger woods": {
         name: "Tiger Woods",
@@ -33,7 +32,7 @@ const players = {
         majors: "15",
         scoring: "68.84 (Career Prime)",
         earnings: "$121,000,000+",
-        fact: "Held all 4 major trophies at the exact same time in 2001, first to ever do it."
+        fact: "Held all 4 major trophies at the exact same time in 2001, known as the 'Tiger Slam'."
     },
     "phil mickelson": {
         name: "Phil Mickelson",
@@ -41,7 +40,7 @@ const players = {
         majors: "6",
         scoring: "69.58",
         earnings: "$96,500,000+",
-        fact: "The oldest player in history to win a Major (2021 PGA Championship at age 50).",
+        fact: "The oldest player in golf history to win a Major (2021 PGA Championship at age 50)."
     },
     "rory mcilroy": {
         name: "Rory McIlroy",
@@ -49,7 +48,7 @@ const players = {
         majors: "4",
         scoring: "69.25",
         earnings: "$90,100,000+",
-        fact: "One of only three players to ever win four majors by the age of 25.",
+        fact: "One of only three players to ever win four majors by the age of 25."
     },
     "brooks koepka": {
         name: "Brooks Koepka",
@@ -57,6 +56,6 @@ const players = {
         majors: "5",
         scoring: "69.80",
         earnings: "$43,000,000+",
-        fact: "Won back-to-back US Opens and back-to-back PGA Championships in 2016.",
-        }
+        fact: "Successfully won back-to-back US Opens and back-to-back PGA Championships."
+    }
 };
