@@ -14,7 +14,7 @@ function calculateAverageHandicap() {
         const scoreValue = parseFloat(document.getElementById("score" + i).value);
 
         if (!scoreValue) {
-            alert("Please fill out all 5 score fields!");
+            alert("Please fill out all of the scores!");
             return;
         }
 
