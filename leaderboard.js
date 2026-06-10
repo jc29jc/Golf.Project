@@ -26,7 +26,6 @@ const players = {
         scoring: "70.12",
         earnings: "$62,800,000+",
         fact: "Won the Master and US open (both majors) in 2015 at just 21 years old.",
-        media: '<iframe width="100%" height="200" src="https://www.youtube.com/embed/n_03pDAnv20?si=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
     },
     "tiger woods": {
         name: "Tiger Woods",
@@ -34,8 +33,7 @@ const players = {
         majors: "15",
         scoring: "68.84 (Career Prime)",
         earnings: "$121,000,000+",
-        fact: "Held all 4 major trophies at the exact same time in 2001, known as the 'Tiger Slam'.",
-        media: '<iframe width="100%" height="200" src="https://www.youtube.com/embed/Y0n6UInwH-0?si=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        fact: "Held all 4 major trophies at the exact same time in 2001, first to ever do it."
     },
     "phil mickelson": {
         name: "Phil Mickelson",
@@ -43,8 +41,7 @@ const players = {
         majors: "6",
         scoring: "69.58",
         earnings: "$96,500,000+",
-        fact: "The oldest player in golf history to win a Major (2021 PGA Championship at age 50).",
-        media: '<iframe width="100%" height="200" src="https://www.youtube.com/embed/9wJ_m_gG6lA?si=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+        fact: "The oldest player in history to win a Major (2021 PGA Championship at age 50).",
     },
     "rory mcilroy": {
         name: "Rory McIlroy",
@@ -53,7 +50,6 @@ const players = {
         scoring: "69.25",
         earnings: "$90,100,000+",
         fact: "One of only three players to ever win four majors by the age of 25.",
-        media: '<iframe width="100%" height="200" src="https://www.youtube.com/embed/uCymP4uKzM0?si=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
     },
     "brooks koepka": {
         name: "Brooks Koepka",
@@ -61,7 +57,6 @@ const players = {
         majors: "5",
         scoring: "69.80",
         earnings: "$43,000,000+",
-        fact: "Successfully won back-to-back US Opens and back-to-back PGA Championships.",
-        media: '<iframe width="100%" height="200" src="https://www.youtube.com/embed/8I0f0z-vE4k?si=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
-    }
+        fact: "Won back-to-back US Opens and back-to-back PGA Championships in 2016.",
+        }
 };
