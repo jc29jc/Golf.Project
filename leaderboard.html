@@ -16,14 +16,14 @@
     </nav>
     
     <h1>Golf Majors & Player Stats</h1>
-    <p>In this page you are able to look at golf majors and players stats since the 2000's`.</p>
+    <p>In this page you are able to look at masters leaderboard and players stats since the 2000's`.</p>
 
 <div class="featured-container">
         <h3>Featured Players You Can Search:</h3>
         <p>Tiger Woods - Rory McIlroy - Phil Mickelson - Jordan Spieth - Brooks Koepka</p>
     </div>
 
-    <div class="search-box">
+<div class="search-box">
         <h3>Search Player Stats:</h3>
         <input type="text" id="playerSearch" placeholder="Type a name (e.g., Tiger Woods)">
         <button onclick="searchPlayer()">Search</button>
@@ -32,12 +32,38 @@
     <div id="searchResult" style="text-align: center; margin-top: 20px;"></div>
 
     <div class="majors-container" style="text-align: center; margin: 30px auto; max-width: 500px;">
-        <h2>The Masters History (Since 2000)</h2>
-        <select id="majorSelect" onchange="showMajorHistory()" style="padding: 8px; font-size: 16px; width: 60%;">
-            <option value="">-- Choose Option --</option>
-            <option value="masters">Show Top 3 Finishers</option>
+        <h2>The Masters dated back to 2000</h2>
+        <select id="yearSelect" onchange="showMastersYear()" style="padding: 8px; font-size: 16px; width: 60%;">
+            <option value="">-- Choose a Year & top three players will show up --</option>
+            <option value="2026">2026</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
         </select>
-        <div id="majorResult" style="margin-top: 15px; font-size: 18px; text-align: left; display: inline-block;"></div>
+        <div id="yearResult" style="margin-top: 15px; font-size: 18px; font-weight: bold; text-align: center;"></div>
     </div>
 
     <script src="leaderboard.js"></script>

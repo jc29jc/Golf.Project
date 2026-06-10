@@ -17,21 +17,15 @@ function searchPlayer() {
     }
 }
 
-function showMajorHistory() {
-    const major = document.getElementById("majorSelect").value;
-    const resultDiv = document.getElementById("majorResult");
+function showMastersYear() {
+    const year = document.getElementById("yearSelect").value;
+    const resultDiv = document.getElementById("yearResult");
     
-    if (!major) {
+    if (year && mastersHistory[year]) {
+        resultDiv.innerHTML = `<p>${mastersHistory[year]}</p>`;
+    } else {
         resultDiv.innerHTML = "";
-        return;
     }
-
-    let htmlContent = "<ul>";
-    majorHistory[major].forEach(y => {
-        htmlContent += `<li><strong>${y.year}:</strong> ${y.top3}</li>`;
-    });
-    
-    resultDiv.innerHTML = htmlContent + "</ul>";
 }
 
 const players = {
@@ -49,7 +43,7 @@ const players = {
         majors: "15",
         scoring: "68.84 (Career Prime)",
         earnings: "$121,000,000+",
-        fact: "Held all 4 major trophies at the exact same time in 2001, first to ever do that."
+        fact: "Held all 4 major trophies at the exact same time in 2001, known as the 'Tiger Slam'."
     },
     "phil mickelson": {
         name: "Phil Mickelson",
@@ -73,38 +67,36 @@ const players = {
         majors: "5",
         scoring: "69.80",
         earnings: "$43,000,000+",
-        fact: "Won back-to-back US Opens and back-to-back PGA Championships in 2016."
+        fact: "Successfully won back-to-back US Opens and back-to-back PGA Championships."
     }
 };
 
-const majorHistory = {
-    "masters": [
-        { year: 2026, top3: "1st: Rory McIlroy | 2nd: Scottie Scheffler | 3rd: J. Rose, R. Henley, T. Hatton, C. Young (Tied)" },
-        { year: 2025, top3: "1st: Rory McIlroy | 2nd: Justin Rose | 3rd: Patrick Reed" },
-        { year: 2024, top3: "1st: Scottie Scheffler | 2nd: Ludvig Åberg | 3rd: Tommy Fleetwood" },
-        { year: 2023, top3: "1st: Jon Rahm | 2nd: Phil Mickelson | 3rd: Brooks Koepka" },
-        { year: 2022, top3: "1st: Scottie Scheffler | 2nd: Rory McIlroy | 3rd: Shane Lowry" },
-        { year: 2021, top3: "1st: Hideki Matsuyama | 2nd: Will Zalatoris | 3rd: Jordan Spieth" },
-        { year: 2020, top3: "1st: Dustin Johnson | 2nd: Cameron Smith | 3rd: Sungjae Im" },
-        { year: 2019, top3: "1st: Tiger Woods | 2nd: Dustin Johnson | 3rd: Brooks Koepka" },
-        { year: 2018, top3: "1st: Patrick Reed | 2nd: Rickie Fowler | 3rd: Jordan Spieth" },
-        { year: 2017, top3: "1st: Sergio Garcia | 2nd: Justin Rose | 3rd: Charl Schwartzel" },
-        { year: 2016, top3: "1st: Danny Willett | 2nd: Jordan Spieth | 3rd: Lee Westwood" },
-        { year: 2015, top3: "1st: Jordan Spieth | 2nd: Phil Mickelson | 3rd: Justin Rose" },
-        { year: 2014, top3: "1st: Bubba Watson | 2nd: Jonas Blixt | 3rd: Jordan Spieth" },
-        { year: 2013, top3: "1st: Adam Scott | 2nd: Angel Cabrera | 3rd: Jason Day" },
-        { year: 2012, top3: "1st: Bubba Watson | 2nd: Louis Oosthuizen | 3rd: Peter Hanson" },
-        { year: 2011, top3: "1st: Charl Schwartzel | 2nd: Adam Scott | 3rd: Jason Day" },
-        { year: 2010, top3: "1st: Phil Mickelson | 2nd: Lee Westwood | 3rd: Anthony Kim" },
-        { year: 2009, top3: "1st: Angel Cabrera | 2nd: Kenny Perry | 3rd: Chad Campbell" },
-        { year: 2008, top3: "1st: Trevor Immelman | 2nd: Tiger Woods | 3rd: Stewart Cink" },
-        { year: 2007, top3: "1st: Zach Johnson | 2nd: Tiger Woods | 3rd: Retief Goosen" },
-        { year: 2006, top3: "1st: Phil Mickelson | 2nd: Tim Clark | 3rd: Jose Maria Olazabal" },
-        { year: 2005, top3: "1st: Tiger Woods | 2nd: Chris DiMarco | 3rd: Retief Goosen" },
-        { year: 2004, top3: "1st: Phil Mickelson | 2nd: Ernie Els | 3rd: K.J. Choi" },
-        { year: 2003, top3: "1st: Mike Weir | 2nd: Len Mattiace | 3rd: Phil Mickelson" },
-        { year: 2002, top3: "1st: Tiger Woods | 2nd: Retief Goosen | 3rd: Phil Mickelson" },
-        { year: 2001, top3: "1st: Tiger Woods | 2nd: David Duval | 3rd: Phil Mickelson" },
-        { year: 2000, top3: "1st: Vijay Singh | 2nd: Ernie Els | 3rd: Loren Roberts" }
-    ]
+const mastersHistory = {
+    "2026": "1st: Rory McIlroy | 2nd: Scottie Scheffler | 3rd: J. Rose, R. Henley, T. Hatton, C. Young (Tied)",
+    "2025": "1st: Rory McIlroy | 2nd: Justin Rose | 3rd: Patrick Reed",
+    "2024": "1st: Scottie Scheffler | 2nd: Ludvig Åberg | 3rd: Tommy Fleetwood",
+    "2023": "1st: Jon Rahm | 2nd: Phil Mickelson | 3rd: Brooks Koepka",
+    "2022": "1st: Scottie Scheffler | 2nd: Rory McIlroy | 3rd: Shane Lowry",
+    "2021": "1st: Hideki Matsuyama | 2nd: Will Zalatoris | 3rd: Jordan Spieth",
+    "2020": "1st: Dustin Johnson | 2nd: Cameron Smith | 3rd: Sungjae Im",
+    "2019": "1st: Tiger Woods | 2nd: Dustin Johnson | 3rd: Brooks Koepka",
+    "2018": "1st: Patrick Reed | 2nd: Rickie Fowler | 3rd: Jordan Spieth",
+    "2017": "1st: Sergio Garcia | 2nd: Justin Rose | 3rd: Charl Schwartzel",
+    "2016": "1st: Danny Willett | 2nd: Jordan Spieth | 3rd: Lee Westwood",
+    "2015": "1st: Jordan Spieth | 2nd: Phil Mickelson | 3rd: Justin Rose",
+    "2014": "1st: Bubba Watson | 2nd: Jonas Blixt | 3rd: Jordan Spieth",
+    "2013": "1st: Adam Scott | 2nd: Angel Cabrera | 3rd: Jason Day",
+    "2012": "1st: Bubba Watson | 2nd: Louis Oosthuizen | 3rd: Peter Hanson",
+    "2011": "1st: Charl Schwartzel | 2nd: Adam Scott | 3rd: Jason Day",
+    "2010": "1st: Phil Mickelson | 2nd: Lee Westwood | 3rd: Anthony Kim",
+    "2009": "1st: Angel Cabrera | 2nd: Kenny Perry | 3rd: Chad Campbell",
+    "2008": "1st: Trevor Immelman | 2nd: Tiger Woods | 3rd: Stewart Cink",
+    "2007": "1st: Zach Johnson | 2nd: Tiger Woods | 3rd: Retief Goosen",
+    "2006": "1st: Phil Mickelson | 2nd: Tim Clark | 3rd: Jose Maria Olazabal",
+    "2005": "1st: Tiger Woods | 2nd: Chris DiMarco | 3rd: Retief Goosen",
+    "2004": "1st: Phil Mickelson | 2nd: Ernie Els | 3rd: K.J. Choi",
+    "2003": "1st: Mike Weir | 2nd: Len Mattiace | 3rd: Phil Mickelson",
+    "2002": "1st: Tiger Woods | 2nd: Retief Goosen | 3rd: Phil Mickelson",
+    "2001": "1st: Tiger Woods | 2nd: David Duval | 3rd: Phil Mickelson",
+    "2000": "1st: Vijay Singh | 2nd: Ernie Els | 3rd: Loren Roberts"
 };
