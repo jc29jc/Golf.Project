@@ -30,6 +30,16 @@
     </div>
 
     <div id="searchResult" style="text-align: center; margin-top: 20px;"></div>
+
+    <div class="majors-container" style="text-align: center; margin: 30px auto; max-width: 500px;">
+        <h2>The Masters History (Since 2000)</h2>
+        <select id="majorSelect" onchange="showMajorHistory()" style="padding: 8px; font-size: 16px; width: 60%;">
+            <option value="">-- Choose Option --</option>
+            <option value="masters">Show Top 3 Finishers</option>
+        </select>
+        <div id="majorResult" style="margin-top: 15px; font-size: 18px; text-align: left; display: inline-block;"></div>
+    </div>
+
     <script src="leaderboard.js"></script>
 </body>
 </html>
