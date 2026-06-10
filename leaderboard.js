@@ -53,3 +53,5 @@ const players = {
         fact: "Successfully won back-to-back US Opens and PGA Championships."
     }
 };
+
+showLeaderboard();
