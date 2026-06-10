@@ -32,7 +32,7 @@ const players = {
         majors: "15",
         scoring: "68.84 (Career Prime)",
         earnings: "$121,000,000+",
-        fact: "Held all 4 major trophies at the exact same time in 2001, known as the 'Tiger Slam'."
+        fact: "Held all 4 major trophies at the exact same time in 2001, firts to ever do it"
     },
     "phil mickelson": {
         name: "Phil Mickelson",
@@ -56,6 +56,6 @@ const players = {
         majors: "5",
         scoring: "69.80",
         earnings: "$43,000,000+",
-        fact: "Successfully won back-to-back US Opens and back-to-back PGA Championships."
+        fact: "Won back-to-back US Opens and back-to-back PGA Championships in 2016."
     }
 };
