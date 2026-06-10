@@ -18,7 +18,7 @@
 
  <div style="text-align: center; margin-top: 50px; font-family: sans-serif;">
         <h1>Golf Trivia Quiz</h1>
-        <p style="color: gray; font-size: 14px;">(Note: Click on the words to answer)</p>
+        <p style="color: gray; font-size: 14px;">(Click on the words to answer)</p>
         <h3 id="question">Question shows here</h3>
         <div id="choices"></div>
         <h2 id="score">Score: 0</h2>
@@ -26,16 +26,16 @@
 
     <script>
         const questions = [
-            { q: "Which tournament awards a 'Green Jacket'?", a: ["The Masters", "U.S. Open", "The Open"], correct: 0 },
+            { q: "Which tournament gives a 'Green Jacket'?", a: ["The Masters", "U.S. Open", "The Open"], correct: 0 },
             { q: "What is 1 stroke under par on a hole?", a: ["Bogey", "Birdie", "Eagle"], correct: 1 },
-            { q: "How many holes are in a standard round?", a: ["9", "14", "18"], correct: 2 },
+            { q: "How many holes are in a round?", a: ["9", "14", "18"], correct: 2 },
             { q: "Who has the most Major wins ever (18)?", a: ["Tiger Woods", "Jack Nicklaus", "Arnold Palmer"], correct: 1 },
             { q: "Max number of clubs allowed in a bag?", a: ["10", "14", "16"], correct: 1 },
-            { q: "What is used to prop the ball up on a tee shot?", a: ["Marker", "Divot", "Tee"], correct: 2 },
-            { q: "What do you yell to warn players of a stray ball?", a: ["Fore!", "Duck!", "Heads up!"], correct: 0 },
-            { q: "Which country is the birthplace of modern golf?", a: ["USA", "Scotland", "England"], correct: 1 },
-            { q: "Which club is used to roll the ball on the green?", a: ["Driver", "Iron", "Putter"], correct: 2 },
-            { q: "What is it called when you hole the ball in 1 shot?", a: ["Birdie", "Hole-in-one", "Albatross"], correct: 1 }
+            { q: "What is used to put the ball up on a tee shot?", a: ["Marker", "Divot", "Tee"], correct: 2 },
+            { q: "What do you yell to warn players that a ball is hit toward them?", a: ["Fore!", "Duck!", "Heads up!"], correct: 0 },
+            { q: "Which country is the origin of golf?", a: ["USA", "Scotland", "England"], correct: 1 },
+            { q: "Which club is used to hit the ball on the green?", a: ["Driver", "Iron", "Putter"], correct: 2 },
+            { q: "What is it called when you make the ball in 1 shot?", a: ["Birdie", "Hole-in-one", "Albatross"], correct: 1 }
         ];
 
         let index = 0;
