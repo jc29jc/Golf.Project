@@ -22,7 +22,7 @@ nav a:hover {
     color: #a3e2a3; 
 }
 
-h1, h2, h3, p, .featured-container {
+h1, h2, h3, p, .featured-container, .search-box, .leaderboard-container {
     text-align: center;
     color: #000000;
 }
@@ -40,9 +40,6 @@ p {
     margin: 20px auto;
     max-width: 500px;
     padding: 15px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
 }
 
 input {
